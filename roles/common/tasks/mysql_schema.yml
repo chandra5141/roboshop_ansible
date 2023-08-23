@@ -1,0 +1,29 @@
+
+- name: Install mysql & python3-PyMySQL
+  ansible.builtin.yum:
+    name:
+      - python3-PyMySQL
+      - mysql
+    state: installed
+
+
+#- name: Check Schema
+#  ansible.builtin.shell: echo 'show databases' | mysql -h mysql-dev.chandupcs.online -uroot -p{{mysql_password}} | grep cities
+#  register: out
+#  ignore_errors: true
+#
+#- name: print
+#  ansible.builtin.debug:
+#    msg: "{{ out }}"
+
+
+- name: load mysql schema
+  ansible.builtin.shell: mysql -h mysql-dev.chandupcs.online -uroot -p{{mysql_password}} </app/schema/{{component}}.sql
+  when: out.rc != 0
+
+
+- name: REStart {{component}} Service
+  ansible.builtin.systemd:
+    name: "{{component}}"
+    state: restarted
+

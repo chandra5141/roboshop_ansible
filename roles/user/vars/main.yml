@@ -1,0 +1,3 @@
+component: user
+schema_laod: true
+schema_type: mongodb
