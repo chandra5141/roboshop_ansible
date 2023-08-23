@@ -14,6 +14,8 @@
   ansible.builtin.pip:
     requirements: /app/requirements.txt
     executable: pip3.6
+  args:
+    chdir: /app
 
 
 - name: include systemd file
