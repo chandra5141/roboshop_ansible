@@ -18,7 +18,7 @@
 
 
 - name: load mysql schema
-  ansible.builtin.shell: mysql -h mysql-dev.chandupcs.online -uroot -p{{mysql_password}} </app/schema/{{component}}.sql
+  ansible.builtin.shell: mysql -h mysql-dev.chandupcs.online -uroot -p{{root_mysql_password}} </app/schema/{{component}}.sql
   when: out.rc != 0
 
 
