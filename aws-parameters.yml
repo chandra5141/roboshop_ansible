@@ -1,5 +1,6 @@
 - name:  parameters store in aws
-  hosts: all
+  hosts: localhost
+  connection: local
   become: yes
   tasks:
     - name: create/update the parameters store in aws
