@@ -21,8 +21,11 @@
 #    remote_src: yes
 
 # now we are downloading the compiled code from nexus repo
-- name: Download {{component}} compiled App content from nexus
+- name: Download {{component}} App content
   ansible.builtin.unarchive:
-    src: http://172.31.93.220:8081/repository/{{component}}/{{component}}-{{app_version}}.zip
+    src: http://{{nexus_user}}:{{nexus_pass}}@172.31.93.220:8081/repository/{{component}}/{{component}}-{{app_version}}.zip
     dest: /app
     remote_src: yes
+  vars:
+    nexus_user: "{{ lookup('aws_ssm', 'nexus.user', region='us-east-1' ) }}"
+    nexus_pass: "{{ lookup('aws_ssm', 'nexus.pass', region='us-east-1' ) }}"
