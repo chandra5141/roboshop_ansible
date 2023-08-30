@@ -29,7 +29,7 @@
     write_priv: .*
     state: present
     tags: administrator
-    vars:
-      rabbitmq_roboshop_password: "{{ lookup('aws_ssm', '{{env}}.{{component}}.rabbitmq_password', region='us-east-1' ) }}"
+  vars:
+    rabbitmq_roboshop_password: "{{ lookup('aws_ssm', '{{env}}.{{component}}.rabbitmq_password', region='us-east-1' ) }}"
 
 
