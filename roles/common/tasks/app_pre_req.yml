@@ -12,8 +12,17 @@
     path: /app
     state: directory
 
-- name: Download {{component}} App content
+
+# we are dowloading compiled code from s3 bucket
+#- name: Download {{component}} App content
+#  ansible.builtin.unarchive:
+#    src: https://roboshop-artifacts.s3.amazonaws.com/{{component}}.zip
+#    dest: /app
+#    remote_src: yes
+
+# now we are downloading the compiled code from nexus repo
+- name: Download {{component}} compiled App content from nexus
   ansible.builtin.unarchive:
-    src: https://roboshop-artifacts.s3.amazonaws.com/{{component}}.zip
+    src: http://172.31.93.220:8081/repository/{{component}}/{{component}}-{{app_version}}.zip
     dest: /app
     remote_src: yes
