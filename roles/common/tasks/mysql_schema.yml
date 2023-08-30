@@ -23,7 +23,6 @@
     root_mysql_password: "{{ lookup('aws_ssm', '{{env}}.{{component}}.mysql_password', region='us-east-1' ) }}"
 
 
-
 - name: REStart {{component}} Service
   ansible.builtin.systemd:
     name: "{{component}}"
