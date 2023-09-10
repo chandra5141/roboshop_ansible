@@ -49,6 +49,8 @@
         - { name: "dev.mysql.mysql_password", value: "RoboShop@1" }
         - { name: "dev.rabbitmq.rabbitmq_password", value: "roboshop123" }
         - { name: "dev.shipping.mysql_password", value: "RoboShop@1" }
+        - { name: "dev.docdb.user", value: "chandra" }
+        - { name: "dev.docdb.password", value: "RoboShop@1" }
 
 
 
