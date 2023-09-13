@@ -53,8 +53,6 @@
         - { name: "dev.docdb.password", value: "roboshop123" }
         - { name: "dev.rds.user", value: "chandra" }
         - { name: "dev.rds.password", value: "roboshop123" }
-        - { name: "dev.rabbitmq.user", value: "roboshop" }
-        - { name: "dev.rabbitmq.password", value: "roboshop1234" }
 
 
 
