@@ -18,9 +18,8 @@
 
 
 - name: load mysql schema
-  ansible.builtin.shell: mysql -h mysql-dev.chandupcs.online -uroot -p{{root_mysql_password}} </app/schema/{{component}}.sql
-  vars:
-    root_mysql_password: "{{ lookup('aws_ssm', '{{env}}.{{component}}.mysql_password', region='us-east-1' ) }}"
+  ansible.builtin.shell: mysql -h {{ lookup('aws_ssm', '{{env}}.rds.endpoint', region='us-east-1' ) }} -u{{ lookup('aws_ssm', '{{env}}.rds.user', region='us-east-1' ) }} -p{{ lookup('aws_ssm', '{{env}}.rds.password', region='us-east-1' ) }} </app/schema/{{component}}.sql
+  when: out.rc != 0
 
 
 - name: REStart {{component}} Service
