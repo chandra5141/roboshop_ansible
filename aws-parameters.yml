@@ -47,7 +47,8 @@
         - { name: "nexus.user", value: "admin" }
         - { name: "nexus.pass", value: "admin123" }
         - { name: "dev.mysql.mysql_password", value: "RoboShop@1" }
-        - { name: "dev.rabbitmq.rabbitmq_password", value: "roboshop123" }
+        - { name: "dev.rabbitmq.user", value: "roboshop123" }
+        - { name: "dev.rabbitmq.password", value: "roboshop123" }
         - { name: "dev.shipping.mysql_password", value: "RoboShop@1" }
         - { name: "dev.docdb.user", value: "chandra" }
         - { name: "dev.docdb.password", value: "roboshop123" }
