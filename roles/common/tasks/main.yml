@@ -14,7 +14,7 @@
   ansible.builtin.shell: sshpass -p {{ lookup('aws_ssm', '{{env}}-SSH.pass', region='us-east-1' ) }} scp /tmp/alert.yml {{ lookup('aws_ssm', '{{env}}-SSH.user', region='us-east-1' ) }}@172.31.90.184:/opt/prometheus/alerts/{{component}}.yml
 
 - name: reload  prometheus server
-  ansible.builtin.shell: curl -v -s -XPOST http://172.31.90.184:9090/-/reload
+  ansible.builtin.shell: curl -v -s -XPOST http://172.31.23.120:9090/-/reload
 
 ## grafana dashboard for graphs
 - name : make grafana template
