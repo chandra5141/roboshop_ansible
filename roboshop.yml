@@ -1,5 +1,5 @@
 - name: roboshop_setup
-  hosts: "{{host}}"
+  hosts: localhost
   become: yes
   roles:
     - "{{role_name}}"
