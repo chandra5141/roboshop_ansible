@@ -2,3 +2,5 @@ component: catalogue
 schema_load: true
 schema_type: mongodb
 app_version: 1.0.0
+service_name: catalogue
+monitor_ssh_service: true
