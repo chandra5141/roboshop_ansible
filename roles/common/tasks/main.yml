@@ -16,6 +16,10 @@
 - name: reload  prometheus server
   ansible.builtin.shell: curl -v -s -XPOST http://172.31.23.120:9090/-/reload
 
+- name: import ELK
+  ansible.builtin.import_role:
+    name: elk
+
 ## grafana dashboard for graphs
 - name : make grafana template
   ansible.builtin.template:

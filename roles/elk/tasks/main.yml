@@ -1,0 +1,9 @@
+- name: Setup Logstash
+  ansible.builtin.include_tasks: "logstash.yml"
+  when: logstash is defined
+
+
+#file beat should only run for frontend
+- name: Setup Filebeat
+  ansible.builtin.include_tasks: "filebeat.yml"
+  when: filebeat
