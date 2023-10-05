@@ -54,9 +54,9 @@
         - { name: "dev.docdb.password", value: "roboshop123" }
         - { name: "dev.rds.user", value: "chandra" }
         - { name: "dev.rds.password", value: "roboshop123" }
-        - { name: "grafana.api_key", value: "eyJrIjoiVG04enA0aHpVSkJIQ1lYYk1XSW5nMmZraHRyN3lZR3YiLCJuIjoicm9ib3Nob3AiLCJpZCI6MX0=" }
-        - { name: "ses.user", value: "AKIAS27NLJNM26IWJ4W6" }
-        - { name: "ses.pass", value: "BNJM6/DxTxcwpjsNjq6co88S8evesHt1MbP4/VNhQKIi" }
+        - { name: "grafana.api_key", value: "eyJrIjoiSHFETEU1Q21jS2FiNzZwM3o4MVNHVlJ3SkVHcmtVNnEiLCJuIjoicm9ib3Nob3AiLCJpZCI6MX0=" }
+        - { name: "ses.user", value: "AKIAQUVDXCUEQMCJQD4A" }
+        - { name: "ses.pass", value: "BNJmYiNJuIabkKS2trGTjoni4X/BOQ3az51eonjtVtVe" }
         - { name: "dev-SSH.user", value: "root" }
         - { name: "dev-SSH.pass", value: "DevOps321" }
 
