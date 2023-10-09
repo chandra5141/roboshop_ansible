@@ -1,0 +1,8 @@
+- name: roboshop_deployment
+  hosts: "{{host}}"
+  become: yes
+  roles:
+    - name: import role deployment
+      ansible.builtin.import_role:
+        name: common
+        tasks_from: deployment
